@@ -75,5 +75,5 @@ server.listen(port, (err) => {
     console.log(`Example app listening at http://localhost:${port}`);
     console.log(`Send a SIGTERM`);
     console.log(`  - when starting node locally: "kill -15 ${process.pid}"`);
-    console.log(`  - with starting with docker: "docker stop test-docker-signals"`);
+    console.log(`  - when starting with docker: "docker stop test-docker-signals"`);
 });
