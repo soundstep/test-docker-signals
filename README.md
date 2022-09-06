@@ -44,7 +44,7 @@ Build and run
 
 ```
 docker build . -t test-docker-signals:latest
-docker run -it -p 5000:5000 --name test-docker-signals test-docker-signals
+docker run -it -p 5001:5001 --name test-docker-signals test-docker-signals
 ```
 
 Cleanup

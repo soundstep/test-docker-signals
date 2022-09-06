@@ -3,7 +3,7 @@ const http = require('http');
 const { createTerminus } = require('@godaddy/terminus');
 
 const app = express();
-const port = 5000;
+const port = 5001;
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
@@ -67,6 +67,14 @@ const terminusOptions = {
 createTerminus(server, terminusOptions);
 // process.on('SIGINT', onSignal);
 // process.on('SIGTERM', onSignal);
+
+server.on('error', (err) => {
+    console.log('ERROR 1', err);
+});
+
+server.on('error', (err) => {
+    console.log('ERROR 2', err);
+});
 
 server.listen(port, (err) => {
     if (err) {
